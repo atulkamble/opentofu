@@ -257,7 +257,14 @@ jobs:
           tofu validate
           tofu plan -no-color
 ```
-
+# Verify locally / in CI
+```
+tofu fmt -recursive
+cd examples/minimal-random
+tofu init -upgrade
+tofu validate
+tofu plan -no-color
+```
 ---
 
 ## 🧪 Example 1 — `examples/minimal-random`
