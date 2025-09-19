@@ -1,7 +1,16 @@
 # terraform-vs-opentofu-starter
 
-A ready-to-use repository that:
 
+starter for **Terraform vs OpenTofu**—with install guides, migration notes, runnable examples, Makefile helpers, and a CI workflow.
+
+Open the full repo content in the canvas on the right. It includes:
+
+* 📘 **README.md**, **COMPARISON.md**, **MIGRATION.md**
+* 🧪 Two runnable examples (no cloud costs): `minimal-random/` and `local-file/`
+* 🧩 A reusable `modules/greeting/` module
+* 🛠️ Makefile targets that work with **either** `tofu` or `terraform`
+* 🤖 GitHub Actions workflow for `fmt`, `validate`, and `plan`
+* 💻 Platform-specific OpenTofu install guides (macOS, Linux, Windows)
 * Compares **Terraform** and **OpenTofu** (feature parity, ecosystem, licensing, migration).
 * Shows **installation & configuration** for OpenTofu on macOS, Linux, and Windows.
 * Provides **copy‑paste runnable IaC examples** that work with either Terraform or OpenTofu.
