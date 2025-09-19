@@ -4,11 +4,3 @@ resource "random_id" "greet" {
     prefix = var.name_prefix
   }
 }
-
-output "message" {
-  value = "Hello, ${var.name_prefix}!"
-}
-
-output "id" {
-  value = random_id.greet.hex
-}
