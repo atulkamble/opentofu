@@ -1,2 +1,1 @@
-# opentofu
-OpenTofu
+# Terraform vs OpenTofu — Starter Repo

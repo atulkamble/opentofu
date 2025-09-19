@@ -1,0 +1,1 @@
+# Install OpenTofu on Windows
