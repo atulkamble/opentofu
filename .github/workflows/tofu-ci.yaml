@@ -16,7 +16,7 @@ jobs:
       - name: Install OpenTofu
         run: |
           sudo mkdir -p /usr/local/bin
-          curl -L "https://get.opentofu.org/install-opentofu.sh" | sudo bash
+          curl -fsSL https://get.opentofu.org/install-opentofu.sh | sudo bash -s -- --install-method standalone
           tofu -version
 
       - name: Validate & Plan (examples/minimal-random)
