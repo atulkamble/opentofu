@@ -1,0 +1,28 @@
+name: IaC CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-plan:
+    runs-on: ubuntu-latest
+    env:
+      TF_IN_AUTOMATION: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install OpenTofu
+        run: |
+          sudo mkdir -p /usr/local/bin
+          curl -L "https://get.opentofu.org/install-opentofu.sh" | sudo bash
+          tofu -version
+
+      - name: Validate & Plan (examples/minimal-random)
+        working-directory: examples/minimal-random
+        run: |
+          tofu init -upgrade
+          tofu fmt -recursive -check
+          tofu validate
+          tofu plan -no-color

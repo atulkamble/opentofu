@@ -1,0 +1,16 @@
+
+### 4) `.gitignore`
+```gitignore
+# IaC
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+crash.log
+
+# macOS & editors
+.DS_Store
+.idea/
+.vscode/
